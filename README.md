@@ -5,6 +5,6 @@ In order to use it :
 
 make && cp filler_tester [vm's directory]
 
-Then simply follow the instructions.
+Then launch filler_tester and simply follow the instructions.
 
 Feedback is welcome.
