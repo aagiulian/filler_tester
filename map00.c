@@ -6,7 +6,7 @@
 /*   By: agiulian <agiulian@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/20 16:24:17 by agiulian          #+#    #+#             */
-/*   Updated: 2017/03/21 18:52:21 by agiulian         ###   ########.fr       */
+/*   Updated: 2017/03/23 17:36:21 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	map00p1(t_prm *prm, char player[21])
 			bzero(prm->entry, 149);
 			prm->fd = open("filler.trace", O_RDONLY);
 			read(prm->fd, prm->buf, 4096);
-			if (strstr(prm->buf, player))
+			if (strstr(prm->buf, player) && !strstr(prm->buf, "Segfault"))
 				score++;
 			j++;
 		}
@@ -72,7 +72,7 @@ void	map00p2(t_prm *prm, char player[21])
 			bzero(prm->entry, 149);
 			prm->fd = open("filler.trace", O_RDONLY);
 			read(prm->fd, prm->buf, 4096);
-			if (strstr(prm->buf, player))
+			if (strstr(prm->buf, player) && !strstr(prm->buf, "Segfault"))
 				score++;
 			j++;
 		}
